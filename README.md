@@ -9,11 +9,11 @@ This is an experimental project to see how some of the newly announced iOS 13 fe
 ![app store gif](Resources/appstore.gif)
 
 ## What I've done
-Used UICollectionViewCompositionalLayout to create 3 layouts without nesting UICollectionViews and all working on the same data type, it truly is amazing.
+Used UICollectionViewCompositionalLayout to create 3 layouts without nesting UICollectionViews and all working on the same data type, it's truly is amazing.
 
-I created three different UICollectionViews, which are SwiftUI components hosted onto UIKit elements using UIHostingController, which basically takes a SwiftUI View and produces a UIViewController. I've used autolayout as the glue, and used Combine framework to pass data between these two worlds.
+I created three different cells, which are SwiftUI components hosted onto UIKit using UIHostingController, which basically takes a SwiftUI View and produces a UIViewController. I've used autolayout as the glue, and used Combine framework to pass data between these two worlds.
 
-Each of the horizontal rows are unique layouts. The views are composed of SwiftUI elements.
+Each of the horizontal rows are unique layouts.
 
 ## What's left to be done
 
