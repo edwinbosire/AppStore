@@ -1,10 +1,10 @@
-# AppStore
+# App Store 
 ⚠️ Experimental Stuff ⚠️ 
 
-App Store using SwiftUI + Combinational layouts + Combine + more iOS 13 Goodies
+With SwiftUI & the new UICollectionView layout APIs being all the rage within the iOS community, I didn't know which to pick first. So I went ahead and implemented both in the same app.
 
 
-This is an experimental project to see how some of the newly announced iOS 13 features works. A big part of the project is made up of[ UICollectionView Compositional Layout](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/using_collection_view_compositional_layouts_and_diffable_data_sources) and SwiftUI elements. There is also a dash of Combine framework. I decided to mix and match UIKit & SwiftUI components to see how apps could integrate.
+This is an experimental project to see how some of the newly announced iOS 13 features works. A big part of the project is made up of[ UICollectionView Compositional Layout](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/using_collection_view_compositional_layouts_and_diffable_data_sources) and [SwiftU](https://developer.apple.com/xcode/swiftui/)I elements. There is also a dash of Combine framework. I decided to mix and match UIKit & SwiftUI components to see how apps could integrate.
 
 ![app store gif](Resources/appstore.gif)
 
