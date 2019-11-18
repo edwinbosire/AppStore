@@ -14,14 +14,14 @@ struct LargeGalleryView : View {
                 Text(storage.note.uppercased())
                     .font(.caption)
                     .fontWeight(.bold)
-                    .color(.blue)
+                    .foregroundColor(.blue)
                 Text(storage.title).font(.title).fontWeight(.medium)
-                Text(storage.slug).font(.title).color(.secondary)
+                Text(storage.slug).font(.title).foregroundColor(.secondary)
             }
             Image(storage.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .relativeSize(width: 1, height: 1)
+                .frame(minWidth: 1, minHeight: 1)
                 .cornerRadius(8)
                 .clipped()
             
@@ -41,19 +41,15 @@ struct LargeGalleryView_Previews : PreviewProvider {
 
 
 import Combine
-class Storage: BindableObject {
-    var didChange = PassthroughSubject<Void, Never>()
+class Storage: ObservableObject {
+    @Published var title = "Fox Factory"
+    @Published var image = "foxFactory"
+    @Published var slug = "Play the Honey Havest now"
+    @Published var note = "New Update"
+    @Published var headerTitle = "What We're playing"
+    @Published var appDescription = "Editorial comment"
     
-    var title = "Fox Factory" { didSet{ update() }}
-    var image = "foxFactory" { didSet { update() } }
-    var slug = "Play the Honey Havest now"  { didSet { update() } }
-    var note = "New Update"  { didSet { update() } }
-    var headerTitle = "What We're playing"  { didSet { update() } }
-    var appDescription = "Editorial comment" { didSet { update() } }
+    @Published var shouldShowSeeAllButton = true
+    @Published var showsSeparator = false
     
-    var shouldShowSeeAllButton = true  { didSet { update() } }
-    var showsSeparator = false { didSet { update() }}
-    func update() {
-        didChange.send(())
-    }
 }

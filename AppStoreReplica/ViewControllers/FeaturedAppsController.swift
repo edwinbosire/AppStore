@@ -111,7 +111,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
         
         dataSource.supplementaryViewProvider = configureSupplementaryViews
         
-        let snapShot = NSDiffableDataSourceSnapshot<AppStoreCategory, App>()
+        var snapShot = NSDiffableDataSourceSnapshot<AppStoreCategory, App>()
         snapShot.appendSections(appCategories!)
         for category in appCategories! {
             snapShot.appendItems(category.apps, toSection: category)
