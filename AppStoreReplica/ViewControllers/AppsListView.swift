@@ -22,7 +22,7 @@ struct AppListRow: View {
     var app: App
     
     var body: some View {
-        HStack(alignment: .center) {
+        HStack(alignment: VerticalAlignment.center) {
             Image(app.imageName)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
@@ -39,7 +39,7 @@ struct AppListRow: View {
                 
                 Text("Some sub heading")
                     .font(.body)
-                    .color(.secondary)
+                    .foregroundColor(.secondary)
                 
                 
                 Button(action: getAction) {

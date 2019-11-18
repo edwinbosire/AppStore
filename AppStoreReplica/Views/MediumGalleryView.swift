@@ -14,7 +14,7 @@ struct MediumGalleryView : View {
             Image(storage.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
-                .relativeSize(width: 1, height: 1.0)
+                .frame(minWidth: 1, minHeight: 1.0)
                 .cornerRadius(8)
                 .clipped()
             
@@ -47,7 +47,7 @@ class MediumGalleryCellView: UICollectionViewCell, AppStoreCellConfigurable {
 
     static var reuseIdentifier = "MediumGalleryCellViewIdentifier"
     
-    lazy var integratedView = MediumGalleryView().environmentObject(storage)
+    lazy var integratedView: some View = MediumGalleryView().environmentObject(storage)
     
     lazy var cellView = UIHostingController(rootView: self.integratedView).view!
     

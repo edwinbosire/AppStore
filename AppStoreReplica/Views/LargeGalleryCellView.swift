@@ -15,7 +15,7 @@ class LargeGalleryCellView: UICollectionViewCell, AppStoreCellConfigurable {
     var note: String = "" { didSet { storage.note = note } }
     var appDescription = "" { didSet { storage.appDescription = appDescription } }
 
-    lazy var integratedView = LargeGalleryView().environmentObject(storage)
+    lazy var integratedView: some View = LargeGalleryView().environmentObject(storage)
     
     lazy var cellView = UIHostingController(rootView: self.integratedView).view!
     

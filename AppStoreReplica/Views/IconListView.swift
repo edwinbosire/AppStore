@@ -27,7 +27,7 @@ struct IconListView : View {
                     
                     Text(storage.slug)
                         .font(.body)
-                        .color(.secondary)
+                        .foregroundColor(.secondary)
                 }
                 Spacer()
                 
@@ -104,7 +104,7 @@ class IconListCellView: UICollectionViewCell, AppStoreCellConfigurable {
     
     static var reuseIdentifier = "IconListCellViewIdentifier"
     
-    lazy var integratedView = IconListView().environmentObject(storage)
+    lazy var integratedView: some View = IconListView().environmentObject(storage)
     
     lazy var cellView = UIHostingController(rootView: self.integratedView).view!
     

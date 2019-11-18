@@ -62,7 +62,7 @@ class HeaderViewCollectionViewHeader: UICollectionViewCell, AppStoreCellConfigur
     var note: String = ""
     var appDescription: String = ""
     
-    lazy var integratedView = HeaderView().environmentObject(storage)
+    lazy var integratedView: some View = HeaderView().environmentObject(storage)
     lazy var cellView = UIHostingController(rootView: self.integratedView).view!
     
     override init(frame: CGRect) {
